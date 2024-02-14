@@ -1,0 +1,23 @@
+:root {
+    --main-color: #d33b33;
+}
+
+.shop {
+    min-height: 70vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.shop h1 {
+    text-align: center;
+    padding: 0 30px;
+    line-height: 1.7;
+    font-size: 25px;
+}
+
+.shop h1 span {
+    color: var(--main-color);
+    display: block;
+}

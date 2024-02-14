@@ -1,0 +1,100 @@
+:root {
+    --main-color: #d33b33;
+}
+
+.about {
+    min-height: 50vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.about .about-fream {
+    background-image: url(../images/all-bg-title.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    padding-top: 50px;
+}
+
+.about .about-fream:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #3333337d;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.about .about-fream h1 {
+    color: white;
+    margin: 00px auto 30px;
+    text-align: center;
+    z-index: 1111;
+    position: relative;
+    display: block;
+}
+
+.about .about-fream div {
+    text-align: center;
+    z-index: 1111;
+    position: relative;
+    background-color: var(--main-color);
+    width: fit-content;
+    padding: 10px 15px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.about .about-fream div span:nth-child(1) {
+    font-weight: 500;
+    color: white;
+}
+
+.about .about-holder {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+@media(max-width:991px) {
+    .about .about-holder {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
+
+.about .about-holder .info {
+    flex-basis: 50%;
+    padding-right: 25px;
+}
+
+.about .about-holder .info h2 {
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.about .about-holder .info p {
+    line-height: 1.7;
+    font-size: 15px;
+    color: #333;
+}
+
+
+.about .about-holder .image {
+    flex-basis: 50%;
+    padding: 5px;
+    border: 1px solid #5c5c5c;
+    border-radius: 5px;
+}
+
+.about .about-holder .image img {
+    max-width: 100%;
+}

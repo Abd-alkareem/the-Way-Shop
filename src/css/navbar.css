@@ -1,0 +1,126 @@
+:root {
+    --main-color: #d33b33;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 1px 14px -4px black;
+}
+
+.nav-bar .naves {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+@media(max-width:991px) {
+    .nav-bar .naves {
+        width: 100%;
+        order: 2;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 0px;
+        height: 0;
+
+    }
+
+    .nav-bar .naves.active {
+        height: 330px;
+        padding-top: 40px;
+    }
+
+}
+
+.nav-bar .minu-btn {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.nav-bar .minu-btn.active {
+    border-color: #333;
+}
+
+.nav-bar .naves li {
+    transition: 0.3s;
+}
+
+.nav-bar .naves li a {
+    color: black;
+    font-weight: 500;
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-bar .naves li.active a,
+.nav-bar .naves li:hover a {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+@media(max-width:991px) {
+    .nav-bar .naves li:not(:last-child) {
+        width: 100%;
+        cursor: pointer;
+        padding: 2px 20px;
+        border-radius: 0 5px 5px 0;
+    }
+
+    .nav-bar .naves li:hover {
+        background-color: var(--main-color);
+
+    }
+
+    .nav-bar .naves li .a {
+        width: 100%;
+        display: block;
+    }
+
+    .nav-bar .naves li:hover a {
+        color: white;
+        font-weight: 600;
+    }
+}
+
+.nav-bar .naves li .search-fild {
+    border-radius: 8px;
+    padding: 6px;
+    border: 1.5px solid #333;
+    color: #333;
+    padding-right: 30px;
+}
+
+.nav-bar .naves li .search-form {
+    position: relative
+}
+
+.nav-bar .naves li .search-form .icon-search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,192 @@
+:root {
+    --main-color: #d33b33;
+}
+
+.Products-page {
+    min-height: 100vh;
+
+}
+
+
+.Products-page .main-heading {
+    margin: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    border-right: 3.5px solid var(--main-color);
+    border-bottom: 3.5px solid var(--main-color);
+    width: fit-content;
+    padding: 0 10px 10px 0;
+    position: relative;
+    color: #5c5c5c;
+}
+
+.Products-page .main-heading::before {
+    content: "";
+    width: 3.5px;
+    height: 75%;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: -12px;
+    right: -12px;
+}
+
+
+.Products-page .main-heading:after {
+    content: "";
+    height: 3.5px;
+    width: 25%;
+    background-color: var(--main-color);
+    position: absolute;
+    right: -10px;
+    bottom: -12px;
+}
+
+.Products-page .container {
+    border-top: 1px solid #5c5c5c;
+    min-height: 50vh;
+}
+
+.Products-page .container .row {
+    padding: 40px 20px;
+}
+
+
+.Products-page .container .row .product-card {
+    min-width: 400px;
+    min-height: 400px;
+    display: flex;
+    justify-content: flex-start;
+    box-shadow: 0 0 7px 0px #5c5c5c;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+
+
+.Products-page .container .row .product-card .image {
+    flex-basis: 40%;
+    position: relative;
+    background-color: #ac2019;
+    border-radius: 5px 0 0 5px;
+}
+
+.Products-page .container .row .product-card .image img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid #5c5c5c;
+    border-radius: 10px;
+    left: -40px;
+    max-width: 200px;
+}
+
+@media(max-width:577px) {
+    .Products-page .container .row {
+        padding: 40px 0px;
+        margin: 0 10px;
+    }
+
+    .Products-page .container .row .col-10 {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .Products-page .container .row .product-card {
+        min-width: initial;
+    }
+
+    .Products-page .container .row .product-card .image {
+        flex-basis: 40%;
+        position: relative;
+        background-color: #ac2019;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .Products-page .container .row .product-card .image img {
+        width: 90%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.Products-page .container .row .product-card .info {
+    flex-basis: 60%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.Products-page .container .row .product-card .info .product-title {
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.Products-page .container .row .product-card .info .product-id {
+    margin-top: -4px;
+    font-size: 14px;
+    color: #5c5c5c;
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.Products-page .container .row .product-card .info .product-price {
+    color: var(--main-color);
+    font-weight: 400;
+    font-size: 35px;
+    margin: 10px 10px 20px;
+}
+
+.Products-page .container .row .product-card .info .product-category {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.Products-page .container .row .product-card .info .product-discreption {
+    min-height: 100px;
+    max-height: 100px;
+    margin: 0;
+    font-size: 16px;
+    overflow: scroll;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #333;
+    margin-right: 5px;
+    box-shadow: 0 0 0 0 #333;
+    border-radius: 0 0 5px 0;
+}
+
+.Products-page .container .row .product-card .info .product-discreption::-webkit-scrollbar {
+    display: none;
+
+}
+
+.Products-page .container .row .product-card .info .add {
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    /* box-shadow: 1px 0px 1px 1px transparent; */
+    transition: 0.3s;
+}
+
+.Products-page .container .row .product-card .info .add:hover {
+    box-shadow: 0px 0px 20px 2px var(--main-color);
+    background-color: #333;
+}

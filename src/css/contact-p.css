@@ -1,0 +1,178 @@
+:root {
+    --main-color: #d33b33;
+}
+
+.contact {
+    min-height: 120vh;
+}
+
+.contact .contact-fream {
+    background-image: url(../images/all-bg-title.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    padding-top: 50px;
+}
+
+.contact .contact-fream:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #3333337d;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contact .contact-fream h1 {
+    color: white;
+    margin: 00px auto 30px;
+    text-align: center;
+    z-index: 1111;
+    position: relative;
+    display: block;
+}
+
+.contact .contact-fream div {
+    text-align: center;
+    z-index: 1111;
+    position: relative;
+    background-color: var(--main-color);
+    width: fit-content;
+    padding: 10px 15px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.contact .contact-fream div span:nth-child(1) {
+    font-weight: 500;
+    color: white;
+}
+
+.contact .contact-holder {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 40px;
+    margin: 60px auto;
+}
+
+.contact .contact-holder .half:first-child {
+    width: 40%;
+    max-width: 350px;
+    background-color: #e5eaec;
+    padding: 10px 10px 20px;
+}
+
+.contact .contact-holder .half:first-child .head {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 10px;
+    display: block;
+}
+
+.contact .contact-holder .half:first-child p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 10px 0;
+    font-style: italic;
+    padding-right: 20px;
+}
+
+.contact .contact-holder .half:first-child>div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 10px;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+}
+
+.contact .contact-holder .half:first-child>div>span {
+    display: flex;
+    align-items: center;
+
+}
+
+.contact .contact-holder .half:first-child>div>span .contact-i {
+    color: var(--main-color);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+
+.contact .contact-holder .half:last-child {
+    width: 55%;
+    min-height: 10vh;
+}
+
+.contact .contact-holder .half:last-child form {}
+
+.contact .contact-holder .half:last-child form .head {
+    margin: 20px 0;
+    display: block;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.contact .contact-holder .half:last-child form p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 10px 0;
+    font-style: italic;
+    padding-right: 20px;
+}
+
+.contact .contact-holder .half:last-child form input {
+    width: 90%;
+    padding: 10px;
+    color: #333;
+    border: 1px solid gainsboro;
+    margin-bottom: 15px;
+}
+
+.contact .contact-holder .half:last-child form input.send {
+    color: white;
+    font-weight: 500;
+    background-color: var(--main-color);
+}
+
+.contact .contact-holder .half:last-child form textarea {
+    width: 90%;
+    padding: 10px;
+    color: #333;
+    border: 1px solid gainsboro;
+    margin-bottom: 15px;
+    resize: none;
+}
+
+@media(max-width:767px) {
+    .contact .contact-holder {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    .contact .contact-holder .half:first-child {
+        width: 90%;
+        overflow-X: scroll;
+    }
+
+    .contact .contact-holder .half:first-child::-webkit-scrollbar {
+        display: none;
+    }
+
+    .contact .contact-holder .half:last-child {
+        width: 90%;
+
+    }
+}
